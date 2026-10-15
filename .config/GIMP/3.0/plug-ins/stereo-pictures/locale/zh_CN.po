@@ -143,3 +143,18 @@ msgstr "应用到双眼"
 
 msgid "Repeat what changed in one view in the other view at the depth d"
 msgstr "将一个视图中的更改以深度 d 重复到另一视图"
+
+msgid "Right eye moved by %d px vertically"
+msgstr "右眼已垂直移动 %d px"
+
+msgid "Align eyes vertically (automatic)"
+msgstr "垂直对齐双眼（自动）"
+
+msgid "Estimate the vertical offset between the Left eye and Right eye layers and move the Right eye by it"
+msgstr "估计 Left eye 与 Right eye 图层之间的垂直偏移，并据此移动 Right eye"
+
+msgid "Search range (px)"
+msgstr "搜索范围 (px)"
+
+msgid "Largest vertical offset to look for, in pixels"
+msgstr "要查找的最大垂直偏移（像素）"

@@ -143,3 +143,18 @@ msgstr "Appliquer aux deux yeux"
 
 msgid "Repeat what changed in one view in the other view at the depth d"
 msgstr "Répète ce qui a changé dans une vue dans l'autre vue à la profondeur d"
+
+msgid "Right eye moved by %d px vertically"
+msgstr "Œil droit déplacé de %d px verticalement"
+
+msgid "Align eyes vertically (automatic)"
+msgstr "Aligner les yeux verticalement (automatique)"
+
+msgid "Estimate the vertical offset between the Left eye and Right eye layers and move the Right eye by it"
+msgstr "Estime le décalage vertical entre les calques Left eye et Right eye et déplace Right eye d'autant"
+
+msgid "Search range (px)"
+msgstr "Plage de recherche (px)"
+
+msgid "Largest vertical offset to look for, in pixels"
+msgstr "Plus grand décalage vertical à rechercher, en pixels"

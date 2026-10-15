@@ -440,6 +440,69 @@ def stereo_apply_both(procedure, run_mode, image, drawables, config, data):
     return procedure.new_return_values(Gimp.PDBStatusType.SUCCESS, GLib.Error())
 
 
+# ---------------------------------------------------------------- align: automatic vertical estimate
+#
+# Vertical disparity is a defect (the eyes cannot fuse it); a pair from two
+# cameras can carry a few rows of it. The estimate finds the vertical shift of
+# the right view that best matches the left one (least sum of absolute grey
+# differences over the central region, coarse at quarter size, then refined at
+# full size), and moves the Right eye layer by it. Rotation and fine work stay
+# with GIMP's own tools: set the Right eye layer to Difference mode and use
+# Move and Rotate with a live view of the mismatch.
+
+def _grey_rows(layer, x0, y0, w, h):
+    buf = layer.get_buffer()
+    data = bytes(buf.get(Gegl.Rectangle.new(x0, y0, w, h), 1.0, "Y' u8", Gegl.AbyssPolicy.CLAMP))
+    return [data[r * w:(r + 1) * w] for r in range(h)]
+
+
+def _best_shift(left_rows, right_rows, search):
+    """The dy with the least sum of absolute differences; right row y+dy against left row y."""
+    h = len(left_rows)
+    best = (None, 0)
+    for dy in range(-search, search + 1):
+        total = 0
+        rows = 0
+        for y in range(max(0, -dy), min(h, h - dy)):
+            l, r = left_rows[y], right_rows[y + dy]
+            total += sum(abs(a - b) for a, b in zip(l, r))
+            rows += 1
+        if rows:
+            score = total / rows
+            if best[0] is None or score < best[0]:
+                best = (score, dy)
+    return best[1]
+
+
+def stereo_align_vertical(procedure, run_mode, image, drawables, config, data):
+    eyes = _eye_layers(image)
+    if eyes is None:
+        return procedure.new_return_values(Gimp.PDBStatusType.CALLING_ERROR, GLib.Error(_("Two layers are needed: Left eye and Right eye")))
+    left, right = eyes
+    w, h = left.get_width(), left.get_height()
+    search = max(2, int(config.get_property("search")))
+    # central region: half the width and height, where the subject usually is
+    cx, cy, cw, ch = w // 4, h // 4, w // 2, h // 2
+    coarse = max(1, min(cw, ch) // 64)  # about 64 rows at the coarse pass
+    lc = _grey_rows(left, cx, cy, cw, ch)[::coarse]
+    rc = _grey_rows(right, cx, cy, cw, ch)[::coarse]
+    lc = [row[::coarse] for row in lc]
+    rc = [row[::coarse] for row in rc]
+    dy = _best_shift(lc, rc, max(1, search // coarse)) * coarse
+    if coarse > 1:
+        lf = _grey_rows(left, cx, cy, cw, ch)
+        rf = _grey_rows(right, cx, cy + dy, cw, ch)
+        dy += _best_shift(lf, rf, coarse)
+    image.undo_group_start()
+    ox, oy = right.get_offsets()[1:] if len(right.get_offsets()) == 3 else right.get_offsets()
+    right.set_offsets(ox, oy - dy)
+    _attach_text(image, "stereo-pictures/vertical-offset", str(dy))
+    image.undo_group_end()
+    Gimp.displays_flush()
+    Gimp.message(_("Right eye moved by %d px vertically") % (-dy))
+    return procedure.new_return_values(Gimp.PDBStatusType.SUCCESS, GLib.Error())
+
+
 LAYOUT_CHOICES = [
     (sf.SIDE_BY_SIDE_LEFT_FIRST, "Side by side, left eye first"),
     (sf.SIDE_BY_SIDE_RIGHT_FIRST, "Side by side, right eye first (cross-eyed)"),
@@ -461,7 +524,7 @@ class StereoPictures(Gimp.PlugIn):
 
     def do_query_procedures(self):
         return ["file-mpo-load", "file-mpo-export", "file-jps-load", "file-jps-export", "file-pns-load", "file-pns-export",
-                "stereo-split", "stereo-join", "stereo-swap-eyes", "stereo-edit-mode", "stereo-apply-both-eyes"]
+                "stereo-split", "stereo-join", "stereo-swap-eyes", "stereo-edit-mode", "stereo-apply-both-eyes", "stereo-align-vertical"]
 
     def do_create_procedure(self, name):
         if name == "file-mpo-load":
@@ -497,7 +560,8 @@ class StereoPictures(Gimp.PlugIn):
                 procedure.add_choice_argument("layout", _("Layout"), _("Which view comes first in the file"), _layout_choice(default), default, GObject.ParamFlags.READWRITE)
         else:
             run = {"stereo-split": stereo_split, "stereo-join": stereo_join, "stereo-swap-eyes": stereo_swap,
-                   "stereo-edit-mode": stereo_edit_mode, "stereo-apply-both-eyes": stereo_apply_both}[name]
+                   "stereo-edit-mode": stereo_edit_mode, "stereo-apply-both-eyes": stereo_apply_both,
+                   "stereo-align-vertical": stereo_align_vertical}[name]
             procedure = Gimp.ImageProcedure.new(self, name, Gimp.PDBProcType.PLUGIN, run, None)
             procedure.set_image_types("*")
             procedure.set_sensitivity_mask(Gimp.ProcedureSensitivityMask.DRAWABLE | Gimp.ProcedureSensitivityMask.DRAWABLES)
@@ -521,9 +585,13 @@ class StereoPictures(Gimp.PlugIn):
                 procedure.add_choice_argument("mode", _("Mode"), _("How edits apply to the two views"), mode, MODE_EACH_EYE, GObject.ParamFlags.READWRITE)
                 procedure.add_int_argument("depth", _("Depth d (px)"), _("Shift of the repeat in the right view, in pixels: positive is behind the screen, negative in front, 0 the screen plane; no limits"),
                                            -GLib.MAXINT32, GLib.MAXINT32, 0, GObject.ParamFlags.READWRITE)
-            else:
+            elif name == "stereo-apply-both-eyes":
                 procedure.set_menu_label(_("Apply to both eyes"))
                 procedure.set_documentation(_("Repeat what changed in one view in the other view at the depth d"), None, name)
+            else:
+                procedure.set_menu_label(_("Align eyes vertically (automatic)"))
+                procedure.set_documentation(_("Estimate the vertical offset between the Left eye and Right eye layers and move the Right eye by it"), None, name)
+                procedure.add_int_argument("search", _("Search range (px)"), _("Largest vertical offset to look for, in pixels"), 1, 4096, 32, GObject.ParamFlags.READWRITE)
             procedure.add_menu_path("<Image>/Stereo/")
         procedure.set_attribution("Daniel Campos Ramos", "Sparky Stereo OS", "2026")
         return procedure

@@ -143,3 +143,18 @@ msgstr "両目に適用"
 
 msgid "Repeat what changed in one view in the other view at the depth d"
 msgstr "一方のビューで変更された内容を深さ d でもう一方のビューに繰り返します"
+
+msgid "Right eye moved by %d px vertically"
+msgstr "右目を垂直に %d px 移動しました"
+
+msgid "Align eyes vertically (automatic)"
+msgstr "左右の目を垂直に揃える（自動）"
+
+msgid "Estimate the vertical offset between the Left eye and Right eye layers and move the Right eye by it"
+msgstr "Left eye と Right eye のレイヤー間の垂直ずれを推定し、その分 Right eye を移動します"
+
+msgid "Search range (px)"
+msgstr "探索範囲 (px)"
+
+msgid "Largest vertical offset to look for, in pixels"
+msgstr "探索する最大の垂直ずれ（ピクセル）"

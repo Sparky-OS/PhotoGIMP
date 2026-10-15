@@ -143,3 +143,18 @@ msgstr "양쪽 눈에 적용"
 
 msgid "Repeat what changed in one view in the other view at the depth d"
 msgstr "한 뷰에서 바뀐 내용을 깊이 d로 다른 뷰에 반복합니다"
+
+msgid "Right eye moved by %d px vertically"
+msgstr "오른쪽 눈을 세로로 %d px 이동했습니다"
+
+msgid "Align eyes vertically (automatic)"
+msgstr "눈 세로 정렬 (자동)"
+
+msgid "Estimate the vertical offset between the Left eye and Right eye layers and move the Right eye by it"
+msgstr "Left eye와 Right eye 레이어 사이의 세로 오프셋을 추정하고 그만큼 Right eye를 이동합니다"
+
+msgid "Search range (px)"
+msgstr "검색 범위 (px)"
+
+msgid "Largest vertical offset to look for, in pixels"
+msgstr "찾을 최대 세로 오프셋(픽셀)"

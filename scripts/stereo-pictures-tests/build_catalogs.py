@@ -106,6 +106,14 @@ STRINGS = {
         ko="오른쪽 뷰에서 반복의 이동량(픽셀): 양수는 화면 뒤, 음수는 앞, 0은 화면 평면. 제한 없음", zh_CN="右视图中重复内容的偏移（像素）：正值在屏幕后方，负值在前方，0 为屏幕平面；无限制", zh_TW="右視圖中重複內容的偏移（像素）：正值在螢幕後方，負值在前方，0 為螢幕平面；無限制"),
     "Apply to both eyes": dict(pl="Zastosuj do obu oczu", pt_BR="Aplicar aos dois olhos", fr="Appliquer aux deux yeux", ja="両目に適用", ko="양쪽 눈에 적용", zh_CN="应用到双眼", zh_TW="套用到雙眼"),
     "Repeat what changed in one view in the other view at the depth d": dict(pl="Powtarza to, co zmieniło się w jednym widoku, w drugim na głębokości d", pt_BR="Repete o que mudou em uma vista na outra vista à profundidade d", fr="Répète ce qui a changé dans une vue dans l'autre vue à la profondeur d", ja="一方のビューで変更された内容を深さ d でもう一方のビューに繰り返します", ko="한 뷰에서 바뀐 내용을 깊이 d로 다른 뷰에 반복합니다", zh_CN="将一个视图中的更改以深度 d 重复到另一视图", zh_TW="將一個視圖中的變更以深度 d 重複到另一視圖"),
+    "Right eye moved by %d px vertically": dict(pl="Prawe oko przesunięte w pionie o %d px", pt_BR="Olho direito movido %d px na vertical", fr="Œil droit déplacé de %d px verticalement", ja="右目を垂直に %d px 移動しました", ko="오른쪽 눈을 세로로 %d px 이동했습니다", zh_CN="右眼已垂直移动 %d px", zh_TW="右眼已垂直移動 %d px"),
+    "Align eyes vertically (automatic)": dict(pl="Wyrównaj oczy w pionie (automatycznie)", pt_BR="Alinhar os olhos na vertical (automático)", fr="Aligner les yeux verticalement (automatique)", ja="左右の目を垂直に揃える（自動）", ko="눈 세로 정렬 (자동)", zh_CN="垂直对齐双眼（自动）", zh_TW="垂直對齊雙眼（自動）"),
+    "Estimate the vertical offset between the Left eye and Right eye layers and move the Right eye by it": dict(
+        pl="Szacuje pionowe przesunięcie między warstwami Left eye i Right eye i przesuwa o nie Right eye", pt_BR="Estima o deslocamento vertical entre as camadas Left eye e Right eye e move a Right eye por ele",
+        fr="Estime le décalage vertical entre les calques Left eye et Right eye et déplace Right eye d'autant", ja="Left eye と Right eye のレイヤー間の垂直ずれを推定し、その分 Right eye を移動します",
+        ko="Left eye와 Right eye 레이어 사이의 세로 오프셋을 추정하고 그만큼 Right eye를 이동합니다", zh_CN="估计 Left eye 与 Right eye 图层之间的垂直偏移，并据此移动 Right eye", zh_TW="估計 Left eye 與 Right eye 圖層之間的垂直偏移，並據此移動 Right eye"),
+    "Search range (px)": dict(pl="Zakres szukania (px)", pt_BR="Faixa de busca (px)", fr="Plage de recherche (px)", ja="探索範囲 (px)", ko="검색 범위 (px)", zh_CN="搜索范围 (px)", zh_TW="搜尋範圍 (px)"),
+    "Largest vertical offset to look for, in pixels": dict(pl="Największe pionowe przesunięcie do wyszukania, w pikselach", pt_BR="Maior deslocamento vertical a procurar, em pixels", fr="Plus grand décalage vertical à rechercher, en pixels", ja="探索する最大の垂直ずれ（ピクセル）", ko="찾을 최대 세로 오프셋(픽셀)", zh_CN="要查找的最大垂直偏移（像素）", zh_TW="要尋找的最大垂直偏移（像素）"),
 }
 LANGS = ["pl", "pt_BR", "fr", "ja", "ko", "zh_CN", "zh_TW"]
 

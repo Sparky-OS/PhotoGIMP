@@ -143,3 +143,18 @@ msgstr "Zastosuj do obu oczu"
 
 msgid "Repeat what changed in one view in the other view at the depth d"
 msgstr "Powtarza to, co zmieniło się w jednym widoku, w drugim na głębokości d"
+
+msgid "Right eye moved by %d px vertically"
+msgstr "Prawe oko przesunięte w pionie o %d px"
+
+msgid "Align eyes vertically (automatic)"
+msgstr "Wyrównaj oczy w pionie (automatycznie)"
+
+msgid "Estimate the vertical offset between the Left eye and Right eye layers and move the Right eye by it"
+msgstr "Szacuje pionowe przesunięcie między warstwami Left eye i Right eye i przesuwa o nie Right eye"
+
+msgid "Search range (px)"
+msgstr "Zakres szukania (px)"
+
+msgid "Largest vertical offset to look for, in pixels"
+msgstr "Największe pionowe przesunięcie do wyszukania, w pikselach"

@@ -26,3 +26,8 @@ Stereo > Stereo editing... offers two modes for a side-by-side canvas (Daniel Ra
 
 **Depth d** is the artist's setting, in whole pixels, with no limits: with the left view first, a positive d puts the painted thing behind the screen (uncrossed disparity), a negative d in front, 0 on the screen plane.
 The value and the mode are kept with the image (persistent parasites), and GIMP remembers the last values of the dialog.
+
+## Align
+
+Stereo > Align eyes vertically (automatic) estimates the vertical offset between the Left eye and Right eye layers (least mean absolute grey difference over the central region, coarse pass then full size) and moves the Right eye layer by it; vertical disparity is a defect the eyes cannot fuse.
+For rotation and fine work by hand: set the Right eye layer's mode to Difference, then use GIMP's Move and Rotate tools with a live view of the mismatch; set the mode back to Normal when done.
