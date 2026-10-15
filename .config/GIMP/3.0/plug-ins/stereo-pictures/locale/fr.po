@@ -1,0 +1,91 @@
+# Sparky Stereo OS, stereo pictures plug-in for GIMP 3: fr strings
+# SPDX-License-Identifier: GPL-3.0-or-later
+msgid ""
+msgstr ""
+"Project-Id-Version: stereo-pictures\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"
+
+msgid "Stereo pair"
+msgstr "Paire stéréo"
+
+msgid "Not a stereo MPO: no pair of disparity frames"
+msgstr "Ce n'est pas un MPO stéréo : aucune paire d'images de disparité"
+
+msgid "Two layers are needed: Left eye and Right eye"
+msgstr "Deux calques sont nécessaires : Left eye et Right eye"
+
+msgid "Side by side, left eye first"
+msgstr "Côte à côte, œil gauche en premier"
+
+msgid "Side by side, right eye first (cross-eyed)"
+msgstr "Côte à côte, œil droit en premier (vision croisée)"
+
+msgid "Top and bottom, left eye on top"
+msgstr "Haut et bas, œil gauche en haut"
+
+msgid "Top and bottom, right eye on top"
+msgstr "Haut et bas, œil droit en haut"
+
+msgid "Stereo MPO picture"
+msgstr "Image stéréo MPO"
+
+msgid "Stereo JPS picture"
+msgstr "Image stéréo JPS"
+
+msgid "Stereo PNS picture"
+msgstr "Image stéréo PNS"
+
+msgid "Stereo %s picture"
+msgstr "Image stéréo %s"
+
+msgid "Load a stereo MPO (CIPA DC-007) as Left eye and Right eye layers"
+msgstr "Charge un MPO stéréo (CIPA DC-007) en calques Left eye et Right eye"
+
+msgid "Load a JPS (side-by-side JPEG) as Left eye and Right eye layers"
+msgstr "Charge un JPS (JPEG côte à côte) en calques Left eye et Right eye"
+
+msgid "Load a PNS (side-by-side PNG with the sTER chunk) as Left eye and Right eye layers"
+msgstr "Charge un PNS (PNG côte à côte avec le bloc sTER) en calques Left eye et Right eye"
+
+msgid "Export the Left eye and Right eye layers as a stereo %s file"
+msgstr "Exporte les calques Left eye et Right eye en fichier stéréo %s"
+
+msgid "Quality"
+msgstr "Qualité"
+
+msgid "JPEG quality"
+msgstr "Qualité JPEG"
+
+msgid "Layout"
+msgstr "Disposition"
+
+msgid "Which view comes first in the file"
+msgstr "Quelle vue vient en premier dans le fichier"
+
+msgid "Split into eye layers"
+msgstr "Séparer en calques par œil"
+
+msgid "Split a side-by-side or top-and-bottom layer into Left eye and Right eye layers"
+msgstr "Sépare un calque côte à côte ou haut et bas en calques Left eye et Right eye"
+
+msgid "How the views are packed in the layer"
+msgstr "Comment les vues sont disposées dans le calque"
+
+msgid "Join eye layers into a pair"
+msgstr "Réunir les calques des yeux en une paire"
+
+msgid "Join the Left eye and Right eye layers into one side-by-side or top-and-bottom layer"
+msgstr "Réunit les calques Left eye et Right eye en un calque côte à côte ou haut et bas"
+
+msgid "How to pack the views"
+msgstr "Comment disposer les vues"
+
+msgid "Swap eyes"
+msgstr "Permuter les yeux"
+
+msgid "Exchange the Left eye and Right eye layers"
+msgstr "Permute les calques Left eye et Right eye"

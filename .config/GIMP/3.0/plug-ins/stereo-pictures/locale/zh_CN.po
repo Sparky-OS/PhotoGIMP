@@ -1,0 +1,91 @@
+# Sparky Stereo OS, stereo pictures plug-in for GIMP 3: zh_CN strings
+# SPDX-License-Identifier: GPL-3.0-or-later
+msgid ""
+msgstr ""
+"Project-Id-Version: stereo-pictures\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"
+
+msgid "Stereo pair"
+msgstr "立体图像对"
+
+msgid "Not a stereo MPO: no pair of disparity frames"
+msgstr "不是立体 MPO 文件：没有视差帧对"
+
+msgid "Two layers are needed: Left eye and Right eye"
+msgstr "需要两个图层：Left eye 和 Right eye"
+
+msgid "Side by side, left eye first"
+msgstr "左右排列，左眼在前"
+
+msgid "Side by side, right eye first (cross-eyed)"
+msgstr "左右排列，右眼在前（交叉视）"
+
+msgid "Top and bottom, left eye on top"
+msgstr "上下排列，左眼在上"
+
+msgid "Top and bottom, right eye on top"
+msgstr "上下排列，右眼在上"
+
+msgid "Stereo MPO picture"
+msgstr "立体 MPO 图像"
+
+msgid "Stereo JPS picture"
+msgstr "立体 JPS 图像"
+
+msgid "Stereo PNS picture"
+msgstr "立体 PNS 图像"
+
+msgid "Stereo %s picture"
+msgstr "立体 %s 图像"
+
+msgid "Load a stereo MPO (CIPA DC-007) as Left eye and Right eye layers"
+msgstr "将立体 MPO（CIPA DC-007）载入为 Left eye 和 Right eye 图层"
+
+msgid "Load a JPS (side-by-side JPEG) as Left eye and Right eye layers"
+msgstr "将 JPS（左右排列的 JPEG）载入为 Left eye 和 Right eye 图层"
+
+msgid "Load a PNS (side-by-side PNG with the sTER chunk) as Left eye and Right eye layers"
+msgstr "将 PNS（带 sTER 数据块的左右排列 PNG）载入为 Left eye 和 Right eye 图层"
+
+msgid "Export the Left eye and Right eye layers as a stereo %s file"
+msgstr "将 Left eye 和 Right eye 图层导出为立体 %s 文件"
+
+msgid "Quality"
+msgstr "质量"
+
+msgid "JPEG quality"
+msgstr "JPEG 质量"
+
+msgid "Layout"
+msgstr "排列方式"
+
+msgid "Which view comes first in the file"
+msgstr "文件中哪一视图在前"
+
+msgid "Split into eye layers"
+msgstr "拆分为左右眼图层"
+
+msgid "Split a side-by-side or top-and-bottom layer into Left eye and Right eye layers"
+msgstr "将左右或上下排列的图层拆分为 Left eye 和 Right eye 图层"
+
+msgid "How the views are packed in the layer"
+msgstr "图层中视图的排列方式"
+
+msgid "Join eye layers into a pair"
+msgstr "将左右眼图层合并为图像对"
+
+msgid "Join the Left eye and Right eye layers into one side-by-side or top-and-bottom layer"
+msgstr "将 Left eye 和 Right eye 图层合并为一个左右或上下排列的图层"
+
+msgid "How to pack the views"
+msgstr "视图的排列方式"
+
+msgid "Swap eyes"
+msgstr "交换左右眼"
+
+msgid "Exchange the Left eye and Right eye layers"
+msgstr "交换 Left eye 和 Right eye 图层"
