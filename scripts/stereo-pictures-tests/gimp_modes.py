@@ -47,6 +47,10 @@ for d in [0, 4, -4, 40, -40, 100]:
     expected |= {(x, y) for y in range(20, 30) for x in range(tx, tx + 10) if 120 <= x < 240}
     say("d=%d: apply status %s, red pixels %d, expected %d, right-half red x range %s" % (d, st, len(reds), len(expected), sorted({x for x, y in reds if x >= 120})[:1] + sorted({x for x, y in reds if x >= 120})[-1:]))
     check("d=%d: red exactly at left (30..39) and right (%d..%d), nothing else" % (d, tx, tx + 9), reds == expected)
+    if d in (0, 4):
+        # proof pair: the canvas as the plug-in left it, full side by side, left view first
+        from gi.repository import Gio
+        Gimp.file_save(Gimp.RunMode.NONINTERACTIVE, img, Gio.File.new_for_path(W + "/evidence/proof/both-eyes-d%d.png" % d), None)
     img.delete()
 # mode 1: each eye on its own
 img, layer = canvas()
