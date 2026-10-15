@@ -89,3 +89,57 @@ msgstr "Permuter les yeux"
 
 msgid "Exchange the Left eye and Right eye layers"
 msgstr "Permute les calques Left eye et Right eye"
+
+msgid "d = 0 px: screen plane"
+msgstr "d = 0 px : plan de l'écran"
+
+msgid "d = +%d px: behind the screen"
+msgstr "d = +%d px : derrière l'écran"
+
+msgid "d = %d px: in front of the screen"
+msgstr "d = %d px : devant l'écran"
+
+msgid "Not a side-by-side picture: nothing to set"
+msgstr "Ce n'est pas une image côte à côte : rien à régler"
+
+msgid "Both eyes alike. %s. Paint tools repeat live with Image > Symmetry Painting > Tiling (interval X %d, two strokes), or after the file is saved and reopened; everything else: Stereo > Apply to both eyes."
+msgstr "Les deux yeux à l'identique. %s. Les outils de peinture répètent en direct avec Image > Peinture en symétrie > Mosaïque (intervalle X %d, deux traits), ou après enregistrement et réouverture du fichier ; tout le reste : Stéréo > Appliquer aux deux yeux."
+
+msgid "Stereo editing is not set to Both eyes alike"
+msgstr "L'édition stéréo n'est pas réglée sur Les deux yeux à l'identique"
+
+msgid "No snapshot to compare with: set Both eyes alike first"
+msgstr "Aucun instantané à comparer : réglez d'abord Les deux yeux à l'identique"
+
+msgid "%d changed pixels repeated in the other eye (%s)"
+msgstr "%d pixels modifiés répétés dans l'autre œil (%s)"
+
+msgid "Stereo editing..."
+msgstr "Édition stéréo..."
+
+msgid "Each eye on its own, or both eyes alike: an edit in one view repeated in the other at the depth d"
+msgstr "Chaque œil séparément, ou les deux yeux à l'identique : une édition dans une vue répétée dans l'autre à la profondeur d"
+
+msgid "Each eye on its own"
+msgstr "Chaque œil séparément"
+
+msgid "Both eyes alike"
+msgstr "Les deux yeux à l'identique"
+
+msgid "Mode"
+msgstr "Mode"
+
+msgid "How edits apply to the two views"
+msgstr "Comment les éditions s'appliquent aux deux vues"
+
+msgid "Depth d (px)"
+msgstr "Profondeur d (px)"
+
+msgid "Shift of the repeat in the right view, in pixels: positive is behind the screen, negative in front, 0 the screen plane; no limits"
+msgstr "Décalage de la répétition dans la vue droite, en pixels : positif derrière l'écran, négatif devant, 0 le plan de l'écran ; sans limites"
+
+msgid "Apply to both eyes"
+msgstr "Appliquer aux deux yeux"
+
+msgid "Repeat what changed in one view in the other view at the depth d"
+msgstr "Répète ce qui a changé dans une vue dans l'autre vue à la profondeur d"

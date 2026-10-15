@@ -89,3 +89,57 @@ msgstr "交换左右眼"
 
 msgid "Exchange the Left eye and Right eye layers"
 msgstr "交换 Left eye 和 Right eye 图层"
+
+msgid "d = 0 px: screen plane"
+msgstr "d = 0 px：屏幕平面"
+
+msgid "d = +%d px: behind the screen"
+msgstr "d = +%d px：屏幕后方"
+
+msgid "d = %d px: in front of the screen"
+msgstr "d = %d px：屏幕前方"
+
+msgid "Not a side-by-side picture: nothing to set"
+msgstr "不是左右排列的图像：无需设置"
+
+msgid "Both eyes alike. %s. Paint tools repeat live with Image > Symmetry Painting > Tiling (interval X %d, two strokes), or after the file is saved and reopened; everything else: Stereo > Apply to both eyes."
+msgstr "双眼一致。%s。绘画工具通过 图像 > 对称绘画 > 平铺（间隔 X %d，两笔）实时重复，或在保存并重新打开文件后生效；其他操作：立体 > 应用到双眼。"
+
+msgid "Stereo editing is not set to Both eyes alike"
+msgstr "立体编辑未设为双眼一致"
+
+msgid "No snapshot to compare with: set Both eyes alike first"
+msgstr "没有可比较的快照：请先设为双眼一致"
+
+msgid "%d changed pixels repeated in the other eye (%s)"
+msgstr "已将 %d 个更改的像素重复到另一眼 (%s)"
+
+msgid "Stereo editing..."
+msgstr "立体编辑..."
+
+msgid "Each eye on its own, or both eyes alike: an edit in one view repeated in the other at the depth d"
+msgstr "每只眼睛单独编辑，或双眼一致：一个视图中的编辑以深度 d 重复到另一视图"
+
+msgid "Each eye on its own"
+msgstr "每只眼睛单独编辑"
+
+msgid "Both eyes alike"
+msgstr "双眼一致"
+
+msgid "Mode"
+msgstr "模式"
+
+msgid "How edits apply to the two views"
+msgstr "编辑如何应用到两个视图"
+
+msgid "Depth d (px)"
+msgstr "深度 d (px)"
+
+msgid "Shift of the repeat in the right view, in pixels: positive is behind the screen, negative in front, 0 the screen plane; no limits"
+msgstr "右视图中重复内容的偏移（像素）：正值在屏幕后方，负值在前方，0 为屏幕平面；无限制"
+
+msgid "Apply to both eyes"
+msgstr "应用到双眼"
+
+msgid "Repeat what changed in one view in the other view at the depth d"
+msgstr "将一个视图中的更改以深度 d 重复到另一视图"

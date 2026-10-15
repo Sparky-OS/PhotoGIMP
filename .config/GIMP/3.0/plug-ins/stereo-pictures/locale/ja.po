@@ -89,3 +89,57 @@ msgstr "左右の目を入れ替え"
 
 msgid "Exchange the Left eye and Right eye layers"
 msgstr "Left eye と Right eye のレイヤーを入れ替えます"
+
+msgid "d = 0 px: screen plane"
+msgstr "d = 0 px: スクリーン面"
+
+msgid "d = +%d px: behind the screen"
+msgstr "d = +%d px: スクリーンの奥"
+
+msgid "d = %d px: in front of the screen"
+msgstr "d = %d px: スクリーンの手前"
+
+msgid "Not a side-by-side picture: nothing to set"
+msgstr "サイドバイサイド画像ではありません: 設定するものがありません"
+
+msgid "Both eyes alike. %s. Paint tools repeat live with Image > Symmetry Painting > Tiling (interval X %d, two strokes), or after the file is saved and reopened; everything else: Stereo > Apply to both eyes."
+msgstr "両目を同じに。%s。描画ツールは「画像 > シンメトリー描画 > タイル」（間隔 X %d、2 ストローク）でライブに繰り返されます。ファイルを保存して再度開いた後も有効です。それ以外は「ステレオ > 両目に適用」を使ってください。"
+
+msgid "Stereo editing is not set to Both eyes alike"
+msgstr "ステレオ編集が「両目を同じに」に設定されていません"
+
+msgid "No snapshot to compare with: set Both eyes alike first"
+msgstr "比較するスナップショットがありません: まず「両目を同じに」を設定してください"
+
+msgid "%d changed pixels repeated in the other eye (%s)"
+msgstr "%d 個の変更ピクセルをもう一方の目に繰り返しました (%s)"
+
+msgid "Stereo editing..."
+msgstr "ステレオ編集..."
+
+msgid "Each eye on its own, or both eyes alike: an edit in one view repeated in the other at the depth d"
+msgstr "それぞれの目を個別に、または両目を同じに: 一方のビューの編集を深さ d でもう一方に繰り返します"
+
+msgid "Each eye on its own"
+msgstr "それぞれの目を個別に"
+
+msgid "Both eyes alike"
+msgstr "両目を同じに"
+
+msgid "Mode"
+msgstr "モード"
+
+msgid "How edits apply to the two views"
+msgstr "編集が 2 つのビューにどう適用されるか"
+
+msgid "Depth d (px)"
+msgstr "深さ d (px)"
+
+msgid "Shift of the repeat in the right view, in pixels: positive is behind the screen, negative in front, 0 the screen plane; no limits"
+msgstr "右ビューでの繰り返しのずれ（ピクセル）: 正はスクリーンの奥、負は手前、0 はスクリーン面。制限なし"
+
+msgid "Apply to both eyes"
+msgstr "両目に適用"
+
+msgid "Repeat what changed in one view in the other view at the depth d"
+msgstr "一方のビューで変更された内容を深さ d でもう一方のビューに繰り返します"

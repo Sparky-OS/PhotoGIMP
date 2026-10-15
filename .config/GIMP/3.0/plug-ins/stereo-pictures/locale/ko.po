@@ -89,3 +89,57 @@ msgstr "눈 바꾸기"
 
 msgid "Exchange the Left eye and Right eye layers"
 msgstr "Left eye와 Right eye 레이어를 서로 바꿉니다"
+
+msgid "d = 0 px: screen plane"
+msgstr "d = 0 px: 화면 평면"
+
+msgid "d = +%d px: behind the screen"
+msgstr "d = +%d px: 화면 뒤"
+
+msgid "d = %d px: in front of the screen"
+msgstr "d = %d px: 화면 앞"
+
+msgid "Not a side-by-side picture: nothing to set"
+msgstr "좌우 배치 이미지가 아닙니다: 설정할 것이 없습니다"
+
+msgid "Both eyes alike. %s. Paint tools repeat live with Image > Symmetry Painting > Tiling (interval X %d, two strokes), or after the file is saved and reopened; everything else: Stereo > Apply to both eyes."
+msgstr "양쪽 눈 동일. %s. 그리기 도구는 이미지 > 대칭 그리기 > 타일링(간격 X %d, 두 번 그리기)으로 실시간 반복되며, 파일을 저장하고 다시 열어도 적용됩니다. 그 외에는 스테레오 > 양쪽 눈에 적용을 사용하세요."
+
+msgid "Stereo editing is not set to Both eyes alike"
+msgstr "스테레오 편집이 양쪽 눈 동일로 설정되어 있지 않습니다"
+
+msgid "No snapshot to compare with: set Both eyes alike first"
+msgstr "비교할 스냅샷이 없습니다: 먼저 양쪽 눈 동일을 설정하세요"
+
+msgid "%d changed pixels repeated in the other eye (%s)"
+msgstr "변경된 픽셀 %d개를 다른 눈에 반복했습니다 (%s)"
+
+msgid "Stereo editing..."
+msgstr "스테레오 편집..."
+
+msgid "Each eye on its own, or both eyes alike: an edit in one view repeated in the other at the depth d"
+msgstr "각 눈 따로, 또는 양쪽 눈 동일: 한 뷰의 편집을 깊이 d로 다른 뷰에 반복"
+
+msgid "Each eye on its own"
+msgstr "각 눈 따로"
+
+msgid "Both eyes alike"
+msgstr "양쪽 눈 동일"
+
+msgid "Mode"
+msgstr "모드"
+
+msgid "How edits apply to the two views"
+msgstr "편집이 두 뷰에 적용되는 방식"
+
+msgid "Depth d (px)"
+msgstr "깊이 d (px)"
+
+msgid "Shift of the repeat in the right view, in pixels: positive is behind the screen, negative in front, 0 the screen plane; no limits"
+msgstr "오른쪽 뷰에서 반복의 이동량(픽셀): 양수는 화면 뒤, 음수는 앞, 0은 화면 평면. 제한 없음"
+
+msgid "Apply to both eyes"
+msgstr "양쪽 눈에 적용"
+
+msgid "Repeat what changed in one view in the other view at the depth d"
+msgstr "한 뷰에서 바뀐 내용을 깊이 d로 다른 뷰에 반복합니다"

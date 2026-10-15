@@ -89,3 +89,57 @@ msgstr "Zamień oczy"
 
 msgid "Exchange the Left eye and Right eye layers"
 msgstr "Zamienia warstwy Left eye i Right eye"
+
+msgid "d = 0 px: screen plane"
+msgstr "d = 0 px: płaszczyzna ekranu"
+
+msgid "d = +%d px: behind the screen"
+msgstr "d = +%d px: za ekranem"
+
+msgid "d = %d px: in front of the screen"
+msgstr "d = %d px: przed ekranem"
+
+msgid "Not a side-by-side picture: nothing to set"
+msgstr "To nie jest obraz obok siebie: nic do ustawienia"
+
+msgid "Both eyes alike. %s. Paint tools repeat live with Image > Symmetry Painting > Tiling (interval X %d, two strokes), or after the file is saved and reopened; everything else: Stereo > Apply to both eyes."
+msgstr "Oba oczy jednakowo. %s. Narzędzia malowania powtarzają na żywo przez Obraz > Malowanie symetryczne > Kafelki (odstęp X %d, dwa pociągnięcia) albo po zapisaniu i ponownym otwarciu pliku; wszystko inne: Stereo > Zastosuj do obu oczu."
+
+msgid "Stereo editing is not set to Both eyes alike"
+msgstr "Edycja stereo nie jest ustawiona na Oba oczy jednakowo"
+
+msgid "No snapshot to compare with: set Both eyes alike first"
+msgstr "Brak migawki do porównania: najpierw ustaw Oba oczy jednakowo"
+
+msgid "%d changed pixels repeated in the other eye (%s)"
+msgstr "%d zmienionych pikseli powtórzono w drugim oku (%s)"
+
+msgid "Stereo editing..."
+msgstr "Edycja stereo..."
+
+msgid "Each eye on its own, or both eyes alike: an edit in one view repeated in the other at the depth d"
+msgstr "Każde oko osobno albo oba oczy jednakowo: edycja w jednym widoku powtórzona w drugim na głębokości d"
+
+msgid "Each eye on its own"
+msgstr "Każde oko osobno"
+
+msgid "Both eyes alike"
+msgstr "Oba oczy jednakowo"
+
+msgid "Mode"
+msgstr "Tryb"
+
+msgid "How edits apply to the two views"
+msgstr "Jak edycje działają na dwa widoki"
+
+msgid "Depth d (px)"
+msgstr "Głębokość d (px)"
+
+msgid "Shift of the repeat in the right view, in pixels: positive is behind the screen, negative in front, 0 the screen plane; no limits"
+msgstr "Przesunięcie powtórzenia w prawym widoku, w pikselach: dodatnie za ekranem, ujemne przed nim, 0 to płaszczyzna ekranu; bez ograniczeń"
+
+msgid "Apply to both eyes"
+msgstr "Zastosuj do obu oczu"
+
+msgid "Repeat what changed in one view in the other view at the depth d"
+msgstr "Powtarza to, co zmieniło się w jednym widoku, w drugim na głębokości d"
